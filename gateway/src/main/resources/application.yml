@@ -1,0 +1,6 @@
+# 配置端口号
+server:
+  port: 8003
+spring:
+  application:
+    name: gateway
