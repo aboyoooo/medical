@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d780d6ef-aed4-4094-a4f3-bf752f0217d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/common/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Victory.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Victory.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/ncu/gateway/config/GatewaySwaggerProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/ncu/gateway/config/GatewaySwaggerProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-patient/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out-patient/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-patient/src/main/java/com/ncu/outpatient/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/out-patient/src/main/java/com/ncu/outpatient/config/SwaggerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out-patient/src/main/java/com/ncu/outpatient/controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/out-patient/src/main/java/com/ncu/outpatient/controller/PatientController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -37,11 +27,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/out-patient/src/main/java/com/ncu/outpatient/controller/PatientController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="189" column="36" selection-start-line="189" selection-start-column="36" selection-end-line="189" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gateway/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="931">
-              <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+            <state relative-caret-position="266">
+              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/common/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="12">
+              <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -183,28 +194,47 @@
             <path>
               <item name="medical" type="b2602c69:ProjectViewProjectNode" />
               <item name="medical" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="medical" type="b2602c69:ProjectViewProjectNode" />
               <item name="medical" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="medical" type="b2602c69:ProjectViewProjectNode" />
               <item name="medical" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="medical" type="b2602c69:ProjectViewProjectNode" />
-              <item name="medical" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="medical" type="b2602c69:ProjectViewProjectNode" />
+              <item name="medical" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="medical" type="b2602c69:ProjectViewProjectNode" />
+              <item name="medical" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="medical" type="b2602c69:ProjectViewProjectNode" />
+              <item name="medical" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="ncu" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -237,19 +267,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\大三下学期\实训\第二阶段\项目\项目源码\medical\out-patient\src\main\resources" />
-      <recent name="E:\大三下学期\实训\第二阶段\项目\项目源码\medical\out-patient\src\main\resources\generator" />
-      <recent name="E:\大三下学期\实训\第二阶段\项目\项目源码\medical\out-patient\src\main\resources\mapper" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.ncu.pojo.common" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\大三下学期\实训\第二阶段\项目\项目源码\medical\common\src\main\java\com\ncu\common\utils" />
       <recent name="E:\大三下学期\实训\第二阶段\项目\项目源码\medical\gateway\src\main\java\com\ncu\gateway\filter" />
       <recent name="E:\大三下学期\实训\第二阶段\项目\项目源码\medical\pojo\src\main\java\com\ncu\pojo\common" />
       <recent name="E:\大三下学期\实训\第二阶段\项目\项目源码\medical\out-patient\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ncu.pojo.common" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\大三下学期\实训\第二阶段\项目\项目源码\medical\out-patient\src\main\resources" />
+      <recent name="E:\大三下学期\实训\第二阶段\项目\项目源码\medical\out-patient\src\main\resources\generator" />
+      <recent name="E:\大三下学期\实训\第二阶段\项目\项目源码\medical\out-patient\src\main\resources\mapper" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -365,6 +395,7 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.MD5Util" />
       <item itemvalue="JUnit.OutPatientApplicationTests" />
       <item itemvalue="JUnit.OutPatientApplicationTests.contextLoads" />
       <item itemvalue="Spring Boot.CommonApplication" />
@@ -374,7 +405,6 @@
       <item itemvalue="Spring Boot.OutPatientApplication" />
       <item itemvalue="Spring Boot.PojoApplication" />
       <item itemvalue="Spring Boot.RegisterCenterApplication" />
-      <item itemvalue="Application.MD5Util" />
     </list>
     <recent_temporary>
       <list>
@@ -452,11 +482,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146542000" />
+    <option name="totallyTimeSpent" value="147113000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2386059" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -480,7 +509,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
       <window_info anchor="bottom" id="Version Control" order="15" weight="0.41784704" />
-      <window_info anchor="bottom" id="Run Dashboard" order="16" sideWeight="0.47587132" visible="true" weight="0.4716714" />
+      <window_info anchor="bottom" id="Run Dashboard" order="16" sideWeight="0.47587132" visible="true" weight="0.3201133" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -638,68 +667,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/ncu/gateway/filter/AuthorizeGateWayFileter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14">
-          <caret line="37" column="57" lean-forward="true" selection-start-line="37" selection-start-column="57" selection-end-line="37" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#745#746#0" expanded="true" />
-            <element signature="e#769#770#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/ncu/common/utils/PermissionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/ncu/common/utils/TokenUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1194#1195#0" expanded="true" />
-            <element signature="e#1250#1251#0" expanded="true" />
-            <element signature="e#1380#1381#0" expanded="true" />
-            <element signature="e#1439#1440#0" expanded="true" />
-            <element signature="e#1530#1531#0" expanded="true" />
-            <element signature="e#1586#1587#0" expanded="true" />
-            <element signature="e#1677#1678#0" expanded="true" />
-            <element signature="e#1734#1735#0" expanded="true" />
-            <element signature="e#2202#2203#0" expanded="true" />
-            <element signature="e#2231#2232#0" expanded="true" />
-            <element signature="e#2274#2275#0" expanded="true" />
-            <element signature="e#2310#2311#0" expanded="true" />
-            <element signature="e#2340#2341#0" expanded="true" />
-            <element signature="e#2369#2370#0" expanded="true" />
-            <element signature="e#2410#2411#0" expanded="true" />
-            <element signature="e#2446#2447#0" expanded="true" />
-            <element signature="e#2478#2479#0" expanded="true" />
-            <element signature="e#2507#2508#0" expanded="true" />
-            <element signature="e#2550#2551#0" expanded="true" />
-            <element signature="e#2586#2587#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/ncu/common/utils/JwtTokenAuthInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/ncu/gateway/filter/AuthorizeGateWayFileter.java" />
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/ncu/common/utils/PermissionHandler.java" />
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/ncu/common/utils/TokenUtil.java" />
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/ncu/common/utils/JwtTokenAuthInterceptor.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.2.6.RELEASE/spring-web-5.2.6.RELEASE-sources.jar!/org/springframework/web/server/ServerWebExchange.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
@@ -761,13 +732,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-gateway-core/2.2.2.RELEASE/spring-cloud-gateway-core-2.2.2.RELEASE.jar!/org/springframework/cloud/gateway/filter/GatewayFilterChain.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -782,20 +746,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/ncu/gateway/filter/SwaggerFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#610#611#0" expanded="true" />
-            <element signature="e#655#656#0" expanded="true" />
-            <element signature="e#620#621#0" expanded="true" />
-            <element signature="e#644#645#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/ncu/gateway/filter/SwaggerFilter.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-gateway-core/2.2.2.RELEASE/spring-cloud-gateway-core-2.2.2.RELEASE-sources.jar!/org/springframework/cloud/gateway/filter/factory/AbstractGatewayFilterFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -896,34 +847,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/ncu/gateway/filter/LoginFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#540#541#0" expanded="true" />
-            <element signature="e#567#568#0" expanded="true" />
-            <element signature="e#610#611#0" expanded="true" />
-            <element signature="e#634#635#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/ncu/gateway/filter/LoginFilter.java" />
     <entry file="file://$PROJECT_DIR$/gateway/src/main/java/com/ncu/gateway/filter/TokenFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="54" column="57" lean-forward="true" selection-start-line="54" selection-start-column="57" selection-end-line="54" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out-patient/src/main/java/com/ncu/outpatient/controller/PatientController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="189" column="36" selection-start-line="189" selection-start-column="36" selection-end-line="189" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -950,10 +878,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/out-patient/src/main/java/com/ncu/outpatient/controller/PatientController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="189" column="36" selection-start-line="189" selection-start-column="36" selection-end-line="189" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/gateway/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="931">
-          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+        <state relative-caret-position="266">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12">
+          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
         </state>
       </provider>
     </entry>
