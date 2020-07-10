@@ -4,3 +4,37 @@ server:
 spring:
   application:
     name: gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: false
+          # 开启小写验证
+          lower-case-service-id: true
+      routes:
+        - id: out-patient
+          uri: lb://out-patient
+          predicates:
+            - Path=/** #路径配置
+          filters:
+            - GwSwaggerHeaderFilter
+  # 配置热部署
+  devtools:
+    restart:
+      enabled: true
+
+# 注册服务
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/
+    # 服务注册中心也会将自己作为客户端来尝试注册自己,为true（默认）时自动生效
+    register-with-eureka: true
+    # 检索服务选项，当设置为True(默认值)时，会进行服务检索,注册中心不负责检索服务。
+    fetch-registry: true
+    registry-fetch-interval-seconds: 5
+  instance:
+    lease-expiration-duration-in-seconds: 15
+    lease-renewal-interval-in-seconds: 5
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${server.port}
