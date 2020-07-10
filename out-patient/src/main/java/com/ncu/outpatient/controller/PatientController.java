@@ -2,6 +2,7 @@ package com.ncu.outpatient.controller;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.ncu.common.utils.JwtUtil;
 import com.ncu.outpatient.service.PatientService;
 import com.ncu.pojo.common.Patient;
 import com.ncu.pojo.common.Result;
@@ -157,10 +158,11 @@ public class PatientController {
         return result;
     }
 
-    @RequestMapping(value = "/patients",method = RequestMethod.PUT)
-    public Result<String> updatePatientInfo(@RequestBody Patient patient){
+    @RequestMapping(value = "/patients/{id}",method = RequestMethod.PUT)
+    public Result<String> updatePatientInfo(@RequestBody Patient patient,@PathVariable("id")String id){
         Result<String> result = new Result<>();
         patient.setUpdateTime(new Date());
+        patient.setPatientId(id);
         if(patientService.updateSelective(patient)!=0){
             //修改成功
             result.setData("修改成功");
@@ -169,6 +171,32 @@ public class PatientController {
             result.setFlag(false);
             result.setCode(StatusCode.ERROR);
             result.setMessage("修改失败");
+            result.setData(null);
+        }
+        return result;
+    }
+
+    @GetMapping(value = "/tokens/{id}")
+    public Result<String> login(@PathVariable("id") String id){
+        Result<String> result = new Result<>();
+        //根据id查询用户
+        Patient patient= patientService.getPatientById(id);
+        if(patient!=null){
+            //生成token
+            try {
+                String token = JwtUtil.genToken(id,patient.getPatientName());
+                result.setData(token);
+            } catch (Exception e) {
+                e.printStackTrace();
+                result.setCode(StatusCode.REMOTEERROR);
+                result.setFlag(false);
+                result.setMessage("服务错误");
+                result.setData(null);
+            }
+        }else{
+            result.setCode(StatusCode.LOGINERROR);
+            result.setFlag(false);
+            result.setMessage("卡号错误");
             result.setData(null);
         }
         return result;

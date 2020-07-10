@@ -38,3 +38,13 @@ eureka:
     lease-renewal-interval-in-seconds: 5
     prefer-ip-address: true
     instance-id: ${spring.application.name}:${server.port}
+
+# 白名单配置
+gateway:
+  filter:
+    allowPaths:
+      - /swagger-ui.html
+      - /webjars/springfox-swagger-ui/
+      - /swagger-resources/
+      - /v2/api-docs
+      - /api/tokens

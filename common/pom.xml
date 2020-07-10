@@ -20,6 +20,18 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
+        <!--pojo依赖-->
+        <dependency>
+            <groupId>com.ncu</groupId>
+            <artifactId>pojo</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <!--jwt依赖-->
+        <dependency>
+            <groupId>com.nimbusds</groupId>
+            <artifactId>nimbus-jose-jwt</artifactId>
+            <version>6.0</version>
+        </dependency>
     </dependencies>
 
 </project>
