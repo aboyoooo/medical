@@ -18,6 +18,16 @@ spring:
             - Path=/** #路径配置
           filters:
             - GwSwaggerHeaderFilter
+      # 配置跨域
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowCredentials: true
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+
+
   # 配置热部署
   devtools:
     restart:
@@ -48,3 +58,4 @@ gateway:
       - /swagger-resources/
       - /v2/api-docs
       - /api/tokens
+      - /csrf

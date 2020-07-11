@@ -11,6 +11,7 @@ import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.core.Ordered;
 import org.springframework.core.io.buffer.DataBuffer;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.http.server.reactive.ServerHttpResponse;
@@ -44,6 +45,14 @@ public class TokenFilter implements GlobalFilter, Ordered {
                 //白名单直接放行
                 return chain.filter(exchange);
             }
+        }
+
+        //如果是 /api/patients请求 同时是post请求 放行
+        String path = request.getURI().getPath();
+        HttpMethod method = request.getMethod();
+        if( method!=null && path.startsWith("/api/patients") && method.matches("POST")){
+            //放行
+            return chain.filter(exchange);
         }
 
         //从header中拿到token
