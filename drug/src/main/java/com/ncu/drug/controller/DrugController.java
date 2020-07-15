@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/drug")
+@RequestMapping("/api")
 public class DrugController {
     @Autowired
     private DrugService drugService;
 
-    @GetMapping("/{id}")
+    @GetMapping("/drug/{id}")
     public Drug queryById(@PathVariable Long id) { return drugService.queryById(id);}
 
 
