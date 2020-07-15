@@ -14,7 +14,7 @@ public class Drug {
     @Id
     //开启主键自动回填
     @KeySql(useGeneratedKeys = true)
-    private Long drugId;
+    private String drugId;
 
     // 药品名
     private String drugName;
@@ -30,6 +30,9 @@ public class Drug {
 
     //
     private Double price;
+
+    //
+    private Integer storage;
 
     //
     private String delFlag;
