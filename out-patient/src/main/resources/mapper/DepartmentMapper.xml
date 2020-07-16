@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ncu.outpatient.mapper.DepartmentMapper">
+  <resultMap id="BaseResultMap" type="com.ncu.pojo.common.Department">
+    <id column="depart_id" jdbcType="VARCHAR" property="departId" />
+    <result column="depart_name" jdbcType="VARCHAR" property="departName" />
+    <result column="depart_code" jdbcType="VARCHAR" property="departCode" />
+    <result column="del_flag" jdbcType="CHAR" property="delFlag" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    depart_id, depart_name, depart_code, del_flag
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from depart_info
+    where depart_id = #{departId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from depart_info
+    where depart_id = #{departId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.ncu.pojo.common.Department">
+    insert into depart_info (depart_id, depart_name, depart_code, 
+      del_flag)
+    values (#{departId,jdbcType=VARCHAR}, #{departName,jdbcType=VARCHAR}, #{departCode,jdbcType=VARCHAR}, 
+      #{delFlag,jdbcType=CHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ncu.pojo.common.Department">
+    insert into depart_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="departId != null">
+        depart_id,
+      </if>
+      <if test="departName != null">
+        depart_name,
+      </if>
+      <if test="departCode != null">
+        depart_code,
+      </if>
+      <if test="delFlag != null">
+        del_flag,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="departId != null">
+        #{departId,jdbcType=VARCHAR},
+      </if>
+      <if test="departName != null">
+        #{departName,jdbcType=VARCHAR},
+      </if>
+      <if test="departCode != null">
+        #{departCode,jdbcType=VARCHAR},
+      </if>
+      <if test="delFlag != null">
+        #{delFlag,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ncu.pojo.common.Department">
+    update depart_info
+    <set>
+      <if test="departName != null">
+        depart_name = #{departName,jdbcType=VARCHAR},
+      </if>
+      <if test="departCode != null">
+        depart_code = #{departCode,jdbcType=VARCHAR},
+      </if>
+      <if test="delFlag != null">
+        del_flag = #{delFlag,jdbcType=CHAR},
+      </if>
+    </set>
+    where depart_id = #{departId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ncu.pojo.common.Department">
+    update depart_info
+    set depart_name = #{departName,jdbcType=VARCHAR},
+      depart_code = #{departCode,jdbcType=VARCHAR},
+      del_flag = #{delFlag,jdbcType=CHAR}
+    where depart_id = #{departId,jdbcType=VARCHAR}
+  </update>
+</mapper>
