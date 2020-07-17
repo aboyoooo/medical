@@ -1,12 +1,16 @@
 package com.ncu.doctor.controller;
 
 import com.ncu.common.utils.JwtUtil;
+import com.ncu.doctor.service.DepartmentService;
 import com.ncu.doctor.service.EmployeeService;
+import com.ncu.pojo.common.Department;
 import com.ncu.pojo.common.Employee;
 import com.ncu.pojo.common.Result;
 import com.ncu.pojo.common.StatusCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * @author : 城南有梦
@@ -19,6 +23,8 @@ import org.springframework.web.bind.annotation.*;
 public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
+    @Autowired
+    private DepartmentService departmentService;
 
     @RequestMapping(value = "/tokens/{name}/{password}",method = RequestMethod.GET)
     public Result<String> login(@PathVariable("name") String userName,@PathVariable("password") String password){
@@ -44,6 +50,22 @@ public class EmployeeController {
             result.setFlag(false);
             result.setCode(StatusCode.ERROR);
             result.setMessage("登录失败");
+            result.setData(null);
+        }
+        return result;
+    }
+
+    @GetMapping(value = "/departments")
+    public Result<List<Department>> getAllDepartments(){
+        Result<List<Department>> result = new Result<>();
+        List<Department> rs = departmentService.findAllDepartments();
+        if(rs!=null){
+            result.setData(rs);
+        }else{
+            //获取失败
+            result.setFlag(false);
+            result.setCode(StatusCode.ERROR);
+            result.setMessage("执行失败");
             result.setData(null);
         }
         return result;

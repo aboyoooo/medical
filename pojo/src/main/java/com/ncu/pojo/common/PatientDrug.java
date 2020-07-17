@@ -14,6 +14,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class PatientDrug {
 
+    private String mListId;
+
     private String code;
 
     private String name;

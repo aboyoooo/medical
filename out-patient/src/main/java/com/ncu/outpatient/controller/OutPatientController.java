@@ -1,9 +1,12 @@
 package com.ncu.outpatient.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import com.ncu.common.utils.IdGenerator;
 import com.ncu.common.utils.impl.OutPatientIdGr;
 import com.ncu.outpatient.service.DepartmentService;
+import com.ncu.outpatient.service.EmployeeService;
 import com.ncu.outpatient.service.OutPatientService;
+import com.ncu.pojo.common.Employee;
 import com.ncu.pojo.common.OutPatient;
 import com.ncu.pojo.common.Result;
 import com.ncu.pojo.common.StatusCode;
@@ -25,15 +28,24 @@ public class OutPatientController {
     private OutPatientService outPatientService;
     @Autowired
     private DepartmentService departmentService;
+    @Autowired
+    private EmployeeService employeeService;
 
     /**
      * 病人门诊挂号
-     * @param outPatient
+     * @param data
      * @return
      */
     @PostMapping(value = "/outpatients")
-    public Result<String> makeAppointment(@RequestBody OutPatient outPatient){
+    public Result<String> makeAppointment(@RequestBody JSONObject data) {
         Result<String> result = new Result<>();
+        OutPatient outPatient = new OutPatient();
+        outPatient.setDepartId(data.getString("departId"));
+        outPatient.setPatientId(data.getString("patientId"));
+        outPatient.setRegisterPrice(Double.parseDouble(data.getString("registerPrice")));
+        String name = data.getString("employeeName");
+        Employee employee = employeeService.findByNameAndDepart(name,outPatient.getDepartId());
+        outPatient.setEmployeeId(employee.getEmployeeId());
         IdGenerator idGenerator = new OutPatientIdGr();
         //生成用户挂号id,并写入outPatient对象
         //获取科室编号

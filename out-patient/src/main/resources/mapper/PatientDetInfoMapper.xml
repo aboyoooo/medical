@@ -26,6 +26,6 @@
                 p_i.patient_id = o_i.patient_id join employee_info e_i on
                 o_i.employee_id = e_i.employee_id
             where p_i.patient_id=#{id}
-            order by o_i.check_time desc limit 1) l join depart_info d_i on l.depart_id = d_i.depart_id;
+            order by o_i.register_time desc limit 1) l join depart_info d_i on l.depart_id = d_i.depart_id;
     </select>
 </mapper>

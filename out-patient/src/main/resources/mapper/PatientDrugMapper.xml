@@ -2,6 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.ncu.outpatient.mapper.PatientDrugMapper">
     <resultMap id="BaseResultMap" type="com.ncu.pojo.common.PatientDrug">
+        <result column="mListId" property="mListId"/>
         <result column="code" property="code"/>
         <result column="name" property="name"/>
         <result column="nums" property="nums"/>
@@ -12,7 +13,8 @@
     </resultMap>
     
     <select id="findDrugsById" parameterType="java.lang.String" resultMap="BaseResultMap">
-        select c_p_r.drug_id as code,
+        select  mess.medical_list_id as mListId,
+				c_p_r.drug_id as code,
         d_i.drug_name as name,
         c_p_r.pay_count as nums,
         d_i.unit as unit,
