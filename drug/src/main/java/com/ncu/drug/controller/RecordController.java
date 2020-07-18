@@ -1,16 +1,14 @@
 package com.ncu.drug.controller;
 
 
+import com.ncu.drug.pojo.Drug;
 import com.ncu.drug.pojo.MedicalList;
 import com.ncu.drug.pojo.Record;
 import com.ncu.drug.service.RecordService;
 import com.ncu.pojo.common.Result;
 import com.ncu.pojo.common.StatusCode;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -47,4 +45,23 @@ public class RecordController {
 
         return result;
     }
+
+    @RequestMapping(value = "/records/updateStatus/{id}",method = RequestMethod.PUT)
+    public Result<String> updatePayStatusByMid(@PathVariable("id")String id) {
+        Result<String> result = new Result<>();
+//        drug.setUpdateTime(new Date());
+//        drug.setDrugId(id);
+        if (recordService.updatePayStatusByMid(id) != 0) {
+            //修改成功
+            result.setData("修改成功");
+        } else {
+            //修改失败
+            result.setFlag(false);
+            result.setCode(StatusCode.ERROR);
+            result.setMessage("修改失败");
+            result.setData(null);
+        }
+        return result;
+    }
+
 }
