@@ -75,3 +75,4 @@ gateway:
       - /out/api/tokens
       - /csrf
       - /drg/api/tokens
+      - /doct/api/tokens

@@ -51,10 +51,10 @@ public class TokenFilter implements GlobalFilter, Ordered {
             }
         }
 
-        //如果是 /api/patients请求 同时是post请求 放行
+        //如果是 /out/api/patients请求 同时是post请求 放行
         String path = request.getURI().getPath();
         HttpMethod method = request.getMethod();
-        if( method!=null && path.startsWith("/api/patients") && method.matches("POST")){
+        if( method!=null && path.startsWith("/out/api/patients") && method.matches("POST")){
             //放行
             return chain.filter(exchange);
         }
