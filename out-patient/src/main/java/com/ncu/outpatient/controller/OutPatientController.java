@@ -6,14 +6,13 @@ import com.ncu.common.utils.impl.OutPatientIdGr;
 import com.ncu.outpatient.service.DepartmentService;
 import com.ncu.outpatient.service.EmployeeService;
 import com.ncu.outpatient.service.OutPatientService;
-import com.ncu.pojo.common.Employee;
-import com.ncu.pojo.common.OutPatient;
-import com.ncu.pojo.common.Result;
-import com.ncu.pojo.common.StatusCode;
+import com.ncu.pojo.common.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author : 城南有梦
@@ -88,6 +87,22 @@ public class OutPatientController {
             result.setCode(StatusCode.ERROR);
             result.setFlag(false);
             result.setMessage("退号失败");
+            result.setData(null);
+        }
+        return result;
+    }
+
+    @GetMapping(value = "/outpatientInfos/patients/{id}")
+    public Result<List<OutpatientInfo>> getAppointments(@PathVariable("id") String id){
+        Result<List<OutpatientInfo>> result = new Result<>();
+        List<OutpatientInfo> rs = outPatientService.queryByStatus(id);
+        if(rs!=null){
+            result.setData(rs);
+        }else{
+            //查询失败
+            result.setCode(StatusCode.ERROR);
+            result.setFlag(false);
+            result.setMessage("查询失败");
             result.setData(null);
         }
         return result;

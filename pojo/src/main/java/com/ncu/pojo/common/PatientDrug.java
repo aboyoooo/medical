@@ -20,6 +20,8 @@ public class PatientDrug {
 
     private String name;
 
+    private String drugId;
+
     private Integer nums;
 
     private String unit;
