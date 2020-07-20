@@ -1,8 +1,22 @@
 # medical
   基于SpringCloud搭建的医疗系统微服务
+## HIS（Hospital Information System)医院信息系统 
+  后端仓库：https://github.com/aboyoooo/medical
+  前端仓库：https://github.com/aboyoooo/medicalFront
+  
+  挂号系统 localhost:8080/outPatient/login
+  医生站系统 localhost:8080/outPatient/login
+  收费系统 localhost:8080/charge/login
+  发药系统 localhost:8080/drug/login
+# 开发相关
+  后端 IntelliJ IDEA
+  前端 WebStrom
+# 技术相关
+  SpringCloud 
+  MyBatis
+  Docker
+  Mysql
+  Eureka
+  GateWay
+  Vue
 
-# 开发工具
-  IDEA
-# 配置说明
-  pull到本地后，使用IDEA打开项目后，首先配置本机的maven(File -> settings -> Build, Execution, Deployment -> Build Tools -> Maven)
-  然后配置jdk,在maven中打开register-center，进行install,安装成功后对maven进行reload 
